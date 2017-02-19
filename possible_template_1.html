@@ -33,7 +33,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -123,20 +122,21 @@
     </div> <!-- /container -->
 
   <script type="text/javascript">
-  $( document ).ready(function() {
-    $("#location_search").hide();
-    $("#issue_search").hide();
-});
+    $( document ).ready(function() {
+      $("#location_search").hide();
+      $("#issue_search").hide();
+    });
 
-  $("#location").click(function(){
-    $("#location_search").show();
-    $("#issue_search").hide();
-});
+    $("#location").click(function(){
+      $("#location_search").show();
+      $("#issue_search").hide();
+    });
 
-$("#issue").click(function(){
-    $("#issue_search").show();
-    $("#location_search").hide();
-});</script>
+    $("#issue").click(function(){
+      $("#issue_search").show();
+      $("#location_search").hide();
+    });
+  </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
