@@ -11,7 +11,7 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Jumbotron Template for Bootstrap</title>
-
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -78,13 +78,21 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Get Advice</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>Get advice</h2>
+          <p>Q: Have you been arrested? <br>
+            Yes: What is the severity of the situation? <br>
+            </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Meet a lawyer</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Q: Do you need representation? <br>
+            Yes: Enter your location<br>
+          <button id="location">Location</button>
+          <button id="issue">Issue</button>
+          <p id="location_search">show location search bar</p>
+          <p id="issue_search">show issues</p>
+          </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
@@ -100,7 +108,21 @@
       </footer>
     </div> <!-- /container -->
 
+  <script type="text/javascript">
+  $( document ).ready(function() {
+    $("#location_search").hide();
+    $("#issue_search").hide();
+});
 
+  $("#location").click(function(){
+    $("#location_search").show();
+    $("#issue_search").hide();
+});
+
+$("#issue").click(function(){
+    $("#issue_search").show();
+    $("#location_search").hide();
+});</script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
